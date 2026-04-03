@@ -30,4 +30,6 @@ public class BeanGerenciado {
         validator.validar(todo);
     }
 
+    //comentário blablabla
+
 }
