@@ -11,7 +11,7 @@ import org.springframework.core.env.ConfigurableEnvironment;
 @SpringBootApplication
 public class Application {
 
-	public static void main(String[] args) {
+	public static void main(String[] args){
 		//SpringApplication.run(Application.class, args);
 
         //Essa declaracao inicializa a aplicação da mesma forma do metodo padrao acima
@@ -27,16 +27,20 @@ public class Application {
         //builder.profiles("producao", "homologacao");
 
         //Rodando a aplicação
-        //builder.run(args);
+        builder.run(args);
 
         //Obtendo um bean
-        //ConfigurableApplicationContext applicationContext = builder.context();
+        ConfigurableApplicationContext applicationContext = builder.context();
         //var produtoRepository = applicationContext.getBean("produtoRepository");
 
         //Obtendo o nome da aplicação
-        //ConfigurableEnvironment environment = applicationContext.getEnvironment();
-        //String applicationName = environment.getProperty("spring.application.name");
+        ConfigurableEnvironment environment = applicationContext.getEnvironment();
+        String applicationName = environment.getProperty("spring.application.name");
         //System.out.println(applicationName);
+
+        //Obtendo uma propriedade
+        ExemploValue value = applicationContext.getBean(ExemploValue.class);
+        value.imprimirVariavel();
 
 	}
 
