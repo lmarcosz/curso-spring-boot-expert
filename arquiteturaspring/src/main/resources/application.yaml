@@ -6,3 +6,6 @@ spring:
   main:
     lazy-initialization: false
 
+app:
+  config:
+    variavel: X
