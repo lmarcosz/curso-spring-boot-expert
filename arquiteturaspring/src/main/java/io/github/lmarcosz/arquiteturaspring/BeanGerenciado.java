@@ -3,9 +3,17 @@ package io.github.lmarcosz.arquiteturaspring;
 import io.github.lmarcosz.arquiteturaspring.todos.TodoEntity;
 import io.github.lmarcosz.arquiteturaspring.todos.TodoValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.WebApplicationContext;
 
 @Component
+@Scope(BeanDefinition.SCOPE_SINGLETON)
+//@Scope(WebApplicationContext.SCOPE_REQUEST)
+//@Scope(WebApplicationContext.SCOPE_SESSION)
+//@Scope(WebApplicationContext.SCOPE_APPLICATION)
 public class BeanGerenciado {
 
     //Injeção do validator direto da propriedade (sem construtor)
@@ -29,7 +37,5 @@ public class BeanGerenciado {
         var todo = new TodoEntity();
         validator.validar(todo);
     }
-
-    //comentário blablabla
 
 }
