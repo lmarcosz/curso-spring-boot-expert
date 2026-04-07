@@ -3,4 +3,6 @@ spring:
     name: arquiteturaspring
   jpa:
     show_sql: true
+  main:
+    lazy-initialization: false
 

@@ -9,8 +9,9 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.WebApplicationContext;
 
+//@Lazy(true)
 @Component
-@Scope(BeanDefinition.SCOPE_SINGLETON)
+//@Scope(BeanDefinition.SCOPE_SINGLETON)
 //@Scope(WebApplicationContext.SCOPE_REQUEST)
 //@Scope(WebApplicationContext.SCOPE_SESSION)
 //@Scope(WebApplicationContext.SCOPE_APPLICATION)

@@ -12,10 +12,13 @@ import org.springframework.core.env.ConfigurableEnvironment;
 public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		//SpringApplication.run(Application.class, args);
 
         //Essa declaracao inicializa a aplicação da mesma forma do metodo padrao acima
-        //SpringApplicationBuilder builder = new SpringApplicationBuilder(Application.class);
+        SpringApplicationBuilder builder = new SpringApplicationBuilder(Application.class);
+
+        //Definindo todos os beans como Lazy
+        //builder.lazyInitialization(true);
 
         //Ocultando o banner Spring do console
         //builder.bannerMode(Banner.Mode.OFF);
