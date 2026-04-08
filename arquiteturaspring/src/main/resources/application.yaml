@@ -10,4 +10,6 @@ app:
   montadora:
     motor-padrao: 135
   config:
-    variavel: X
+    variavel: valor da variavel X
+    valor1: 2001
+
